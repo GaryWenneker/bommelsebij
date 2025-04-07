@@ -1,0 +1,36 @@
+.background-video-container {
+  position: relative; /* Needed for absolute positioning of the video */
+  width: 100vw; /* Viewport width */
+  height: 100vh; /* Viewport height */
+  overflow: hidden; /* Prevent scrollbars if the video slightly overflows */
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%); /* Center the video */
+  object-fit: cover; /* Ensure the video covers the entire container */
+  z-index: -1; /* Place the video behind other content */
+}
+
+.content {
+  position: relative; /* Allows content to be on top of the video */
+  z-index: 1; /* Ensure content is above the video */
+  /* Add styling for your content as needed */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
